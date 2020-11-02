@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Up Or Shape Out!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="row row1">
+        <div class="card">
+            <div class="card-content blue-grey lighten-4">
+              <p class="font1">Choose Your Shape:</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#rectangle">Rectangle</a></li>
+                <li class="tab"><a href="#square">Square</a></li>
+                <li class="tab"><a href="#circle">Circle</a></li>
+                <li class="tab"><a href="#isoceles">Isoceles</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="rectangle">
+                <div class="row">
+                    <div class="col s4"><input id="rec-height" placeholder="Input Height" type="number" required></div>
+                    <div class="col s4"><input id="rec-width" placeholder="Input Width" type="number" required></div>
+                    <div class="col s4"><button class="waves-effect waves-light btn" id="add-rectangle">Add Rectangle</button></div>
+                </div>
+              </div>
+              <div id="square">
+                <div class="row">
+                    <div class="col s9"><input id="square-side" placeholder="Side Length" type="number" required></div>
+                    <div class="col s3"><button class="waves-effect waves-light btn" id="add-square">Add Square</button></div>
+                </div>
+              </div>
+              <div id="circle">
+                  <div class="row">
+                      <div class="col s9"><input id="circle-radius" placeholder="Radius" type="number" required></div>
+                      <div class="col s3"><button class="waves-effect waves-light btn" id="add-circle">Add Circle</button></div>
+                  </div>
+              </div>
+              <div id="isoceles">
+                <div class="row">
+                    <div class="col s9"><input id="isoceles-height" placeholder="Isoceles Height" type="number" required></div>
+                    <div class="col s3"><button class="waves-effect waves-light btn" id="add-isoceles">Add Isoceles</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="row row1">
+        <div class="col s9">
+            <div class="box-container" id="shape-board">
+            </div>
+        </div>
+        <div class="col s3">
+            <ul class="collection with-header">
+                <li class="collection-header"><h6 class="font1">Shape Deets:</h6></li>
+                <li class="collection-item font1 blue-grey lighten-4">Shape Name:</li>
+                <li class="collection-item" id="shape-name"></li>
+                <li class="collection-item font1 blue-grey lighten-4">Width:</li>
+                <li class="collection-item" id="shape-width"></li>
+                <li class="collection-item font1 blue-grey lighten-4">Height:</li>
+                <li class="collection-item" id="shape-height"></li>
+                <li class="collection-item font1 blue-grey lighten-4">Radius:</li>
+                <li class="collection-item" id="shape-radius"></li>
+                <li class="collection-item font1 blue-grey lighten-4">Area:</li>
+                <li class="collection-item" id="shape-area"></li>
+                <li class="collection-item font1 blue-grey lighten-4">Perimiter:</li>
+                <li class="collection-item" id="shape-perimiter"></li>
+              </ul>
+        </div>
+    </div>
+    
+
+<script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+<script src='app.js'></script> 
+</body>
+</html>
