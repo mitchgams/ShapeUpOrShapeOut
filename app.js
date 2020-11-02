@@ -1,6 +1,6 @@
 M.AutoInit();
 $('document').ready(() => {
-    if (window.screen.width <= 1150) alert('Please use a larger screen. 1150+');
+    if (window.outerWidth <= 1150) alert('use bigger screen 1150+. k thanks.');
     $('#add-square').click(() => {
         if($('#square-side').val() !== "") new Square($('#square-side').val());
     });
