@@ -16,9 +16,9 @@ $('document').ready(() => {
 });
 
 class Shape {
-    constructor(name, length, height, radius) {
+    constructor(name, width, height, radius) {
         this.name = name;
-        this.width = length;
+        this.width = width;
         this.height = height;
         this.radius = radius;
         this.checkSize();
@@ -66,7 +66,6 @@ class Shape {
 class Rectangle extends Shape {
     constructor(height, width) {
         super('rectangle', width, height, "");
-        this.build();
     }
     area() {
         return this.width * this.height;
@@ -78,7 +77,6 @@ class Rectangle extends Shape {
 class Square extends Shape {
     constructor(width) {
         super('square', width, width, "");
-        this.build();
     }
     area() {
         return this.width * this.width;
@@ -90,7 +88,6 @@ class Square extends Shape {
 class Circle extends Shape {
     constructor(radius) {
         super('circle', radius*2, radius*2, radius);
-        this.build();
     }
     area() {
         return this.width * this.width;
