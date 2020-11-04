@@ -1,25 +1,21 @@
 M.AutoInit();
 $('document').ready(() => {
-    if (window.outerWidth <= 1150) alert('use bigger screen 1150+. k thanks.');
-    $('#add-square').click(() => {
-        if($('#square-side').val() !== "") new Square($('#square-side').val());
-    });
-    $('#add-circle').click(() => {
-        if($('#square-radius').val() !== "") new Circle($('#circle-radius').val());
-    });
-    $('#add-isoceles').click(() => {
-        if($('#isoceles-height').val() !== "") new Isoceles($('#isoceles-height').val());
-    });
+    if (window.outerWidth <= 1150) alert('Use bigger screen, 1150+.');
+    $('#add-square').click(() => $('#square-side').val() !== "" ? new Square($('#square-side').val()) : alert('Please enter value.'));
+    $('#add-circle').click(() => $('#square-radius').val() !== "" ? new Circle($('#circle-radius').val()) : alert('Please enter value.'));
+    $('#add-isoceles').click(() => $('#isoceles-height').val() !== "" ? new Isoceles($('#isoceles-height').val()) : alert('Please enter value.'));
     $('#add-rectangle').click(() => {
-        if($('#rec-height').val() !== "" && $('#rec-width').val()) new Rectangle($('#rec-height').val(), $('#rec-width').val());
+        if($('#rec-height').val() !== "" && $('#rec-width').val() !== "") {
+             new Rectangle($('#rec-height').val(), $('#rec-width').val());
+        } else  alert('Please enter value.');
     });
 });
 
 class Shape {
     constructor(name, width, height, radius) {
-        this.name = name;
-        this.width = width;
-        this.height = height;
+        this.name = name,
+        this.width = width,
+        this.height = height,
         this.radius = radius;
         this.checkSize();
         this.div = $(`<div class="${this.name}" style="height:${this.height}px; width:${this.width}px; background-color:${this.randColor()} margin-left:${this.randMove()}px; margin-top:${this.randMove()}px;"></div>`);
