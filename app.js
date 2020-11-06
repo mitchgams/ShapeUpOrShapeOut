@@ -86,10 +86,10 @@ class Circle extends Shape {
         super('circle', radius*2, radius*2, radius);
     }
     area() {
-        return this.width * this.width;
+        return Math.floor(2 * Math.PI * Math.pow(this.radius, 2));
     }
     perimiter() {
-        return 4 * this.width;
+        return Math.floor(2 * Math.PI * this.radius);
     }
 }
 
